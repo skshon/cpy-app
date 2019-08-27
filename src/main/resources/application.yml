@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    generate-ddl: true
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/cpy_db?useSSL=false
+    username: root
+  mvc.view:
+    prefix: /WEB-INF/
+    suffix: .jsp
