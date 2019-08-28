@@ -36,9 +36,12 @@ dependencies {
     compile "org.springframework:spring-core:$springVersion"
     compile("mysql:mysql-connector-java:6.0.6")
     compile("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-actuator:$springBootVersion")
+    compile("org.springframework.boot:spring-boot-starter-security:$springBootVersion")
 }
 
 bootRun.environment([
         "HELLO_MESSAGE": "Hello~~Aditiya!!",
         "SPRING_DATASOURCE_URL": "jdbc:mysql://localhost:3306/cpy_db?user=root&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false",
+        "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*",
 ])
